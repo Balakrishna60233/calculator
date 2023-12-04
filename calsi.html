@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #name{
+            text-align: center;
+            font-family: sans-serif;
+        }
+        body{
+            background-image: url('https://wallpapercave.com/wp/wp2649468.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: opacity(0.5);
+
+        }
+        .div1{
+            height: fit-content;
+            width: fit-content;
+            align-items: center;
+            background-image: linear-gradient(
+            green,#5ddcff, #3c67e3 43%, #4e00c2,red 45deg);;
+            
+            border-radius: 10px;
+            margin-left: 550px;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        #res{
+            background-color: rgb(96, 127, 145));
+            width:300px;
+            height: 50px;
+            border-radius: 5px;
+            font-size: 30px;
+            color: black;
+        }
+        #ggg{
+            width: 70px;
+            height: 55px;
+            border-radius: 5px;
+            font-size: 30px;
+            color: red;
+            background-color: blue;
+        }
+        input{
+            width: 70px;
+            height: 30px;
+            border: 2px solid aqua;
+            margin-top: 10px;
+            border-radius: 5px;
+            background-color: dimgrey;
+            font-size: 20px;
+        }
+        .div1:hover {
+            
+            background-color: rgb(0,0,0,0.5);
+        }
+    </style>
+    <script type="text/javascript">
+         function clearScreen(){
+            
+            document.getElementById("res").value = "";
+           
+
+        }
+        function display(value){
+            document.getElementById("res").value += value;
+            
+        }
+        function calculate(){
+            var a=document.getElementById("res").value;
+            var b=eval(a);
+            document.getElementById("res").value=b;
+        }
+       
+    </script>
+</head>
+<body>
+    <h1 id="name">CALCULATOR</h1>
+    <div class="div1">
+        <table>
+            <tr>
+                <td colspan="3">
+                <input type="text" id="res" disabled />
+            </td>
+            <td><input type="button" value="c" onclick="clearScreen()" id="ggg"></td>
+        </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="display('1')"></td>
+                <td><input type="button" value="2" onclick="display('2')"></td>
+                <td><input type="button" value="3" onclick="display('3')"></td>
+                <td><input type="button" value="/" onclick="display('/')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="display('4')"></td>
+                <td><input type="button" value="5" onclick="display('5')"></td>
+                <td><input type="button" value="6" onclick="display('6')"></td>
+                <td><input type="button" value="*" onclick="display('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="display('7')"></td>
+                <td><input type="button" value="8" onclick="display('8')"></td>
+                <td><input type="button" value="9" onclick="display('9')"></td>
+                <td><input type="button" value="-" onclick="display('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" onclick="display('4')"></td>
+                <td><input type="button" value="." onclick="display('.')"></td>
+                <td><input type="button" value="=" onclick="calculate()"></td>
+                <td><input type="button" value="+" onclick="display('+')"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
